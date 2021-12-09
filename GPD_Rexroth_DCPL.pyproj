@@ -47,12 +47,15 @@
     <Compile Include="GPD_Rexroth_DCPL\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gpd\static\site.css" />
+    <Content Include="gpd\templates\gpd\about.html" />
     <Content Include="gpd\templates\gpd\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="gpd\" />
     <Folder Include="gpd\migrations\" />
+    <Folder Include="gpd\static\" />
     <Folder Include="gpd\templates\" />
     <Folder Include="gpd\templates\gpd\" />
     <Folder Include="GPD_Rexroth_DCPL\" />

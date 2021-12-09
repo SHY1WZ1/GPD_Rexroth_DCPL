@@ -16,11 +16,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-# Uncomment next two lines to enable admin:
-#from django.contrib import admin
-#from django.urls import path
+from django.urls import path, include
+from django.contrib import admin
+import gpd.views
 
+# Django processes URL patterns in the order they appear in the array
+# Each URL pattern describes the views to which Django routes specific 
+# site-relative URLs (that is, the portion that follows https://www.domain.com/). 
+# The first entry in urlPatterns that starts with the regular expression ^$ is the routing for the site root, "/". 
+# The second entry, ^home$ specifically routes "/home". You can have any number of routings to the same view.
 urlpatterns = [
-    # Uncomment the next line to enable the admin:
-    #path('admin/', admin.site.urls)
+    path('', gpd.views.index, name='home'),
+    path('about/', gpd.views.about, name='about'),
+    path('home/', gpd.views.index, name='home'),
+    path('admin/', admin.site.urls),
 ]
