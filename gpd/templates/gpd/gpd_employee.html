@@ -1,0 +1,152 @@
+{% extends 'gpd/main.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'gpd/gpd_info_blocks/slidebar.html' %}
+
+<body data-bs-spy="scroll" data-bs-offset="15" data-bs-target="#myScrollspy">
+
+    <div class="container-fluid" id="qwerty123">
+
+        <div class="row">
+            <div class="col-2" id="myScrollspy">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action active" href="#section1_route_map">Route Map</a>
+                    <a class="list-group-item list-group-item-action" href="#section2_general_info">General Information</a>
+                    <a class="list-group-item list-group-item-action" href="#section3_review_info">Review Information</a>
+                    <a class="list-group-item list-group-item-action" href="#section4_anual_review">Annual Review - Meeting</a>
+                    <a class="list-group-item list-group-item-action" href="#section5_job">Job Responsibility</a>
+                    <a class="list-group-item list-group-item-action" href="#section6_eav_goals">EAV Goals</a>
+                    <a class="list-group-item list-group-item-action" href="#section7_corporate_goal_1">Corporate Goals</a>
+                    <a class="list-group-item list-group-item-action" href="#section8_overall_performance">Overall Performance</a>
+                    <a class="list-group-item list-group-item-action" href="#section9_summary">Summary</a>
+                    <a class="list-group-item list-group-item-action" href="#section10_competency_assessment">Competency Assessment</a>
+                    <a class="list-group-item list-group-item-action" href="#section11_result_orientation">Results Orientation</a>
+                    <a class="list-group-item list-group-item-action" href="#section12_future_orientation">Future Orientation</a>
+                    <a class="list-group-item list-group-item-action" href="#section13_leading_myself">Leading My Self</a>
+                    <a class="list-group-item list-group-item-action" href="#section14_leading_others">Leading Others</a>
+
+                    <a class="list-group-item list-group-item-action" href="#section15_cooperation">Cooperation</a>
+                    <a class="list-group-item list-group-item-action" href="#section16_communication">Communication</a>
+                    <a class="list-group-item list-group-item-action" href="#section17_expierence">Breadth of Experience</a>
+                    <a class="list-group-item list-group-item-action" href="#section18_knowledge">Depth of Knowledge</a>
+
+                    
+
+                    
+                    
+                    
+
+
+                </div>
+            </div>
+
+            <div class="col-10">
+
+                <div id="section1_route_map">
+                    {% include 'gpd/gpd_info_blocks/route_map.html' %}
+                </div>
+
+                <hr>
+
+                <div id="section2_general_info" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/general_info.html' %}
+                </div>
+
+                <hr>
+
+                <div id="section3_review_info" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/review_info.html' %}
+                </div>
+
+                <hr>
+
+                <div id="section4_anual_review" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/anual_review.html' %}
+                </div>
+
+                <hr>
+
+                <div id="section5_job" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/job_responsibility.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section6_eav_goals" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/eav_goals.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section7_corporate_goal_1" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/corporate_goal.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section8_overall_performance" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/overall_performance.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section9_summary" class="container-fluid">
+                    {% include 'gpd/gpd_info_blocks/summary.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section10_competency_assessment" class="container-fluid">
+                    {% include 'gpd/competence_assessment/competency_assessment.html' %}
+                </div>
+
+                <hr />
+
+                <div id="section11_result_orientation" class="container-fluid">
+                    {% include 'gpd/competence_assessment/result_orientation.html' %}
+                </div>
+
+
+                <div id="section12_future_orientation" class="container-fluid">
+                    {% include 'gpd/competence_assessment/future_orientation.html' %}
+                </div>
+
+
+                <div id="section13_leading_myself" class="container-fluid">
+                    {% include 'gpd/competence_assessment/leading_myself.html' %}
+                </div>
+
+
+                <div id="section14_leading_others" class="container-fluid">
+                    {% include 'gpd/competence_assessment/leading_others.html' %}
+                </div>
+
+                 <div id="section15_cooperation" class="container-fluid">
+                    {% include 'gpd/competence_assessment/cooperation.html' %}
+                </div>
+
+                <div id="section16_communication" class="container-fluid">
+                    {% include 'gpd/competence_assessment/communication.html' %}
+                </div>
+
+                <div id="section17_expierence" class="container-fluid">
+                    {% include 'gpd/competence_assessment/expierence.html' %}
+                </div>
+
+                <div id="section18_knowledge" class="container-fluid">
+                    {% include 'gpd/competence_assessment/knowledge.html' %}
+                </div>
+
+
+                <div class="row">
+                    <button type="button" class="btn btn-info" style="position: absolute; right: 0;">Save and Close</button>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

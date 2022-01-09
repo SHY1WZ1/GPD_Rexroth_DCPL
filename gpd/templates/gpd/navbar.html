@@ -1,0 +1,28 @@
+{% load static %}
+
+{% block content %}
+
+    
+    <nav class="navbar navbar-expand-md sticky navbar-dark " style="width: 100%; overflow: hidden; z-index: 1;background-color:rgb(24 75 138) ">
+        <img src="../../static/img/logo.png" width="180"
+             height="72" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Dashboard </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gpd_page">GPD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/info">Information</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+{% endblock %}
+

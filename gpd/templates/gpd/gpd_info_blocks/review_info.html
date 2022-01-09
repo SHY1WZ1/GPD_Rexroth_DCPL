@@ -1,0 +1,42 @@
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="section-title">
+        Review Information
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-2">
+        <p>Created by:</p>
+    </div>
+    <div class="col-4">
+        Jolanta Kowalczyk (KKJ1WZ1)
+    </div>
+</div>
+<div class="row">
+    <div class="col-2">
+        <p>Review Period:</p>
+    </div>
+    <div class="col-2">
+        <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <div class="input-group-addon">
+                &nbsp;<i class="far fa-calendar-alt"></i>
+            </div>
+        </div>
+    </div>
+    ---
+    <div class="col-2">
+        <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <div class="input-group-addon">
+                &nbsp;<i class="far fa-calendar-alt"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid" style="position: fixed; overflow: hidden; z-index: 4; background-color: white; overflow: inherit !important;" id="slidebar">
+    <div class="container-fluid">
+        <div class="row">
+            <p>&nbsp</p>
+            <button type="button" class="btn btn-light">Back to: Inbox</button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="section-title">
+                    GPD 2021 - EAV, Competence Assessment for Andrii Shyrokov
+                </div>
+                <br />
+            </div>
+            <div class="col" style="padding-left: 300px;">
+                <div class="btn-group" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><p style="color:#7a91be;font-size:12px">Info about this form</p></a></li>
+                            <li><a href="#"><p style="color:#7a91be;font-size:12px">Add to Outlook</p></a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-default"><i class="fa fa-history fa-md" aria-hidden="true"></i> History</button>
+                    <button class="btn btn-default"><i class="fa fa-print fa-md" aria-hidden="true"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-file-pdf fa-md" aria-hidden="true"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-save fa-md" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

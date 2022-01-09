@@ -1,0 +1,186 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> GPD DCPL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+
+
+        i {
+            color: #7a91be;
+        }
+
+        td {
+            font-family: 'Segoe UI';
+            font-size: small;
+            color: #014673;
+        }
+
+        th {
+            font-size: small;
+            color: #014673;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: small;
+            color: #014673;
+            font-weight: bold;
+        }
+
+        /*Padding and text color for section in gpd_info.html*/
+        #section1_route_map, #section2_general_info,
+        #section3_review_info, #section4_anual_review,
+        #section5_job, #section6_eav_goals,
+        #section7_corporate_goal_1, #section8_overall_performance,
+        #section9_summary, #section10_competency_assessment,
+        #section11_result_orientation, #section12_future_orientation,
+        #section13_leading_myself, #section14_leading_others,
+        #section15_cooperation, #section16_communication,
+        #section17_expierence, #section18_knowledge{
+            color: black;
+            padding-top: 11em;
+        }
+
+        /* Style for sections in gpd_info.html*/
+        .section-title {
+            font-family: 'Segoe UI';
+            font-size: large;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #525F6BFF;
+        }
+
+        .section-sub-title {
+            font-family: 'Segoe UI';
+            font-size: large;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #014673;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+        }
+
+        body {
+            position: relative;
+        }
+
+        #example-modal {
+            color: cornflowerblue;
+        }
+
+        /* Custom style to stick list group on top */
+        .list-group {
+            position: sticky;
+            top: 200px;
+        }
+
+        .datepicker {
+            background-color:;
+            color: #333;
+        }
+
+        .carousel {
+            margin-top: 50px;
+        }
+
+        .carousel-inner {
+            height: 120px;
+        }
+
+        .carousel-caption {
+            color: #fff;
+            top: 50%;
+        }
+
+
+
+        .fa-stack-2x {
+            color: rgb(62 72 255)
+        }
+
+        .fa-stack-1x {
+            color: white;
+        }
+
+        #p_carousel {
+            color: green;
+        }
+
+        #h4_carousel {
+            color: darkslateblue;
+        }
+
+        #carouselExampleControls {
+            z-index: -1;
+            background-color:rgb(246 237 237)
+        }
+
+        .list-group-item {
+            background-color:AppWorkspace;
+        }
+
+            .list-group-item.active {
+                background-color: cornflowerblue;
+                border-color: cornflowerblue;
+            }
+
+            .inv {
+    display: none;
+}
+
+    </style>
+
+
+
+</head>
+<body>
+    {% include 'gpd/navbar.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    <hr />
+    <div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<p>Copyright Bosch Rexroth Poland © 2022. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+</html>
