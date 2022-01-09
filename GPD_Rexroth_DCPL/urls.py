@@ -26,8 +26,6 @@ import gpd.views
 # The first entry in urlPatterns that starts with the regular expression ^$ is the routing for the site root, "/". 
 # The second entry, ^home$ specifically routes "/home". You can have any number of routings to the same view.
 urlpatterns = [
-    path('', gpd.views.index, name='home'),
-    path('about/', gpd.views.about, name='about'),
-    path('home/', gpd.views.index, name='home'),
     path('admin/', admin.site.urls),
-]
+    path('', include('gpd.apps_url')),
+    ]

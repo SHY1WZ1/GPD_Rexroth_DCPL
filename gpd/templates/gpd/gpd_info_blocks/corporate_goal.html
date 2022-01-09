@@ -1,0 +1,127 @@
+{% load static %}
+
+{% for i in data %}
+        
+
+{% block content %}
+
+<!-- Corporate goal section-->
+    <div class="row">
+    <div class="section-title">
+        Corporate Goal {{ i }}
+    </div>
+    <button class="btn btn-default" style="float: right; margin-left: 10px">
+        <i class="far fa-edit"></i>
+    </button>
+    <button class="btn btn-default" style="float: right">
+        <i class="fas fa-trash"></i>
+    </button>
+    <div style="margin-inline-start:auto">
+        {{i}}0 % of total score
+    </div>
+</div>
+<div class="row">
+    Manager Rating <br />
+    From EAV-Goals 2021 <br />
+    unrated <br />
+</div>
+
+<!-- Tabs for details-->
+    <ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home{{i}}">Goal Details</a></li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu{{i}}">Other Details</a></li>
+</ul>
+
+<!-- Tabs content for details-->
+<div class="tab-content" >
+    <!--First tab-->
+    <div id="home{{i}}" class="tab-pane fade show active">
+        <div class="row">
+            <!--Column 1-->
+            <div class="col">
+                <table class="table-bordless" style="margin-top:20px;">
+                    <tbody>
+                        <tr>
+                            <th>Start Date</th>
+                            <td width="50"></td>
+                            <td>01/01/2021</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td width="20"></td>
+                            <td>10.0%</td>
+                        </tr>
+                        <tr>
+                            <th>Weighted EAV Factor</th>
+                            <td width="20"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Column 2-->
+            <div class="col">
+                <table class="table-bordless" style="margin-top:20px;">
+                    <tbody>
+                        <tr>
+                            <th>Due Date</th>
+                            <td width="50"></td>
+                            <td>12/31/2021</td>
+                        </tr>
+                        <tr>
+                            <th>Achieved EAV Factor</th>
+                            <td width="20"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Goal Achievement Degree</th>
+                            <td width="20"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Second tab-->
+    <div id="menu{{i}}" class="tab-pane fade" style="margin-top:20px;">
+        <p>EAV Factor for Goal Achievement:</p>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>EAV Factor</th>
+                    <td>0</td>
+                    <th>Description</th>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <th>EAV Factor</th>
+                    <td>1</td>
+                    <th>Description</th>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <th>EAV Factor</th>
+                    <td>2</td>
+                    <th>Description</th>
+                    <td>74</td>
+                </tr>
+                <tr>
+                    <th>EAV Factor</th>
+                    <td>3</td>
+                    <th>Description</th>
+                    <td>66</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
+<br />
+<br />
+{% endblock %}
+
+{% endfor %}

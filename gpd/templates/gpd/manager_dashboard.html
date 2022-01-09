@@ -1,0 +1,50 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="section" id="initial_page">
+        <div class="container-fluid ">
+            <div class="row justify-content-start">
+                <h1>Select GPD's</h1>
+            </div>
+        </div>
+
+   <select id="target">
+            <option value="">Select...</option>
+            <option value="content_1">My Own</option>
+            <option value="content_2">My Team</option>
+        </select>
+
+        <div id="content_1" class="inv">
+            <p>My own</p>
+                  {% include 'app/gpd_info_blocks/gpd.html' %}
+            </div>
+        <div id="content_2" class="inv">
+            <p>My Team</p>
+                  {% include 'app/gpd_info_blocks/gpd.html' %}
+            </div>
+        
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="scripts/script.js"></script>
+<script>
+document
+    .getElementById('target')
+    .addEventListener('change', function () {
+        'use strict';
+        var vis = document.querySelector('.vis'),
+            target = document.getElementById(this.value);
+        if (vis !== null) {
+            vis.className = 'inv';
+        }
+        if (target !== null) {
+            target.className = 'vis';
+        }
+    });
+</script>
+{% endblock %}
+
+
+

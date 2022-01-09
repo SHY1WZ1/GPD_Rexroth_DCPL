@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="section-sub-title">
+        1. Entrepreneurial Mindset - Results Orientation
+    </div>
+</div>
+<br>
+<div class="row">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Enter comments"></textarea>
+</div>
+
+    <div class="row">
+        <div class="section-title">
+        Manager Rating <br />
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group">
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>unrated</option>
+            {% for rate in rates %}
+                <option>{{rate}}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+{% endblock %}

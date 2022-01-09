@@ -1,0 +1,179 @@
+{% load static %}
+
+{% block content %}
+
+<div class="section" id="initial_page">
+        <div class="container-fluid ">
+            <div class="row justify-content-start">
+                <h1>My Forms</h1>
+            </div>
+        </div>
+        <div class="container-fluid ">
+            <div class="row justify-content-start">
+                <div class="col-2" id="sticky-sidebar">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">All Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">In Progress</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Completed</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <button id="button" class="btn btn-primary text-toogle" type="button" data-toggle="collapse" 
+          data-target="#gpd-table-parameters" aria-expanded="false" 
+          aria-controls="gpd-table-parameters" onclick ="toggleIcon";>
+  <span class="glyphicon glyphicon-triangle-bottom"></span>&nbsp;Display Options
+  </button>
+
+                       
+<div id="gpd-table-parameters" class="collapse" >
+        <td valign="top" align="left">
+
+         <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Form Title</span>
+         </label>&nbsp; 
+
+         <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Associate</span>
+         </label>&nbsp; 
+
+		 <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Step</span>
+         </label>&nbsp;
+		         
+		 <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Date Assigned</span>
+         </label>&nbsp;
+		         
+		 <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Step Due Date</span>
+         </label>&nbsp;  
+		         
+		 <input type="checkbox" checked="checked">
+            <label>
+            <span class="formLabelsTextSize">Form Start Date</span>
+         </label>&nbsp; 
+      
+		 <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Form Due Date</span>
+         </label>&nbsp;
+		         
+		 <input type="checkbox" checked="checked">
+         <label>
+            <span class="formLabelsTextSize">Last Modified</span>
+         </label>&nbsp;
+		         
+		 <input id="12" name="12" aria-describedby="dispayOptionsDescription" checked="checked" value="12" type="checkbox" onclick="javascript:toggleDisplayOptions(this, '12_', 'display_options');">
+         <label for="12">
+            <span class="formLabelsTextSize">Sent From</span>
+         </label>&nbsp;  
+        </td>
+</div>
+    
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col-3">
+                                  <div class="text-nowrap">
+                                    Form Title
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Associate
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Step
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Date Assigned
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Step Due Date
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Form Start Date
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Form end date
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Form due date
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Last modified
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Sent From
+                                  </div>
+                                </th>
+
+                                <th scope="col">
+                                  <div class="text-nowrap">
+                                    Action
+                                  </div>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <a class="nav-link" href="/gpd_employee">GPD 2021 - EAV, Competence Assessment for Andrii Shyrokov</a>
+                                   </td>
+                                <td>Andrii Shyrokov</td>
+                                <td>5. Dialogue Annual Review</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,28 +1,31 @@
-# Create your views here.
+"""
+Definition of views.
+"""
 
-from django.shortcuts import render   # Added for this step
 from datetime import datetime
+from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
 
-def index(request):
-    now = datetime.now()
+import numpy as np
 
-    return render(
-        request,
-        "gpd/index.html",  # Relative path from the 'templates' folder to the template file
-        # "index.html", # Use this code for VS 2017 15.7 and earlier
-        {
-            'title' : "Hello Django",
-            'message' : "Hello Django!",
-            'content' : " on " + now.strftime("%A, %d %B, %Y at %X")
-        }
-    )
 
-def about(request):
-    return render(
-        request,
-        "gpd/about.html",
-        {
-            'title' : "About GPD",
-            'content' : "Example app page for Django."
-        }
-    )
+def home(request):
+    return render(request, 'gpd/dashboard.html')
+
+
+def gpd_page(request):
+    return render(request, 'gpd/gpd_page.html')
+
+
+def info(request):
+    return render(request, 'gpd/info.html')
+
+def gpd_employee(request):
+    context = {
+        "data" : [1, 2, 3,4,5],
+        "rates":np.round(np.arange(0, 3.1, 0.1),1).tolist(),
+    }
+    return render(request, 'gpd/gpd_employee.html', context)
+
+def gpd_manager(request):
+    return render(request, 'gpd/manager_dashboard.html')
