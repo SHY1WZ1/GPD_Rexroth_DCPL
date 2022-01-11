@@ -1,8 +1,30 @@
 from django.db import models
 from django.contrib import admin
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 
+class BonusPackage(models.Model):
+    bonus_name = models.CharField(max_length=30, default='Package ')
+    individual_component_weight = models.IntegerField(validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ],default='')
+    team_component_weight = models.IntegerField(validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ],default='')
+    CU_component_weight = models.IntegerField(validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ],default='')
+    complementary_component_weight = models.IntegerField(validators=[
+            MaxValueValidator(100),
+            MinValueValidator(1)
+        ],default='')
+
+    def __str__(self):
+        return self.bonus_name 
 
 
 
@@ -11,14 +33,7 @@ class Person(models.Model):
 			('Active', 'Active'),
 			('Deactivated', 'Deactivated'),
 			) 
-   # PACKAGE = (
-			#('1', '1'),
-			#('2', '2'),
-   #         ('1/2', '1/2'),
-   #         ('K2', 'K2'),
-   #         ('3', '3'),
-   #         ('K3', 'K3'),
-			#) 
+
     name = models.CharField(max_length=30,default='')
     lastname = models.CharField(max_length=30, default='')
     department = models.CharField(max_length=30, default='')
@@ -27,6 +42,7 @@ class Person(models.Model):
     position = models.CharField(max_length=30, default='')
     email = models.CharField(max_length=50, default='')
     status = models.CharField(max_length=200, null=True, choices=CATEGORY)
+    bonus_group= models.ForeignKey(BonusPackage, on_delete=models.DO_NOTHING,default='')
     
     
 
@@ -38,12 +54,12 @@ class Person(models.Model):
     
 
 class TableAdmin(admin.ModelAdmin):
-    list_display= ('name','lastname', 'end_user','mng_end_user','position','email', 'status')
+    list_display= ('name','lastname', 'end_user','mng_end_user','position','email', 'status','bonus_group')
 
 
 class Meta:
         verbose_name="Bosch Rexroth GPD Assessment"
 
 class BonusAdmin(admin.ModelAdmin):
-    list_display= ('bonus_group_name','individual_comp_weight')
+    list_display= ('bonus_name','individual_component_weight','team_component_weight','CU_component_weight','complementary_component_weight')
 
