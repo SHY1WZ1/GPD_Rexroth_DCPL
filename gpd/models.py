@@ -5,7 +5,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class BonusPackage(models.Model):
-    bonus_name = models.CharField(max_length=30, default='Package ')
+    bonus_name = models.CharField(max_length=30)
     individual_component_weight = models.IntegerField(validators=[
             MaxValueValidator(100),
             MinValueValidator(1)
@@ -42,12 +42,9 @@ class Person(models.Model):
     position = models.CharField(max_length=30, default='')
     email = models.CharField(max_length=50, default='')
     status = models.CharField(max_length=200, null=True, choices=CATEGORY)
-    bonus_group= models.ForeignKey(BonusPackage, on_delete=models.DO_NOTHING,default='')
-    
-    
+    bonus_group= models.ForeignKey(BonusPackage, on_delete=models.CASCADE,default='')
 
-    def __str__(self):
-        return self.name +' '+self.lastname+' '+ self.end_user
+    
 
 
 

@@ -1,6 +1,6 @@
 {% load static %}
 
-{% block content %}
+{% block person %}
 
 <div class="row">
     <div class="section-title">
@@ -17,27 +17,37 @@
                 <tr>
                     <th>Last Name</th>
                     <td width="50"></td>
-                    <td>Shyrokov</td>
+                    <td>
+                            {{ person.lastname }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Global ID</th>
                     <td width="20"></td>
-                    <td>11648039</td>
+                    <td>
+                            {{ person.end_user }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Target Manager</th>
                     <td width="20"></td>
-                    <td>Ewelina Dragan</td>
+                    <td>
+                            {{ person.mng_end_user }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Organizational Office</th>
                     <td width="20"></td>
-                    <td>DCEE/SID-PL</td>
+                    <td>
+                            {{ person.department }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Local Grade</th>
                     <td width="20"></td>
-                    <td>T2</td>
+                    <td>
+                            {{ person.bonus_group }}
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -50,22 +60,26 @@
                 <tr>
                     <th>First Name</th>
                     <td width="50"></td>
-                    <td>Andrii</td>
+                    <td>
+                            {{ person.name }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Local ID</th>
                     <td width="50"></td>
-                    <td>60800418</td>
+                    <td> TO DO</td>
                 </tr>
                 <tr>
                     <th>Position</th>
                     <td width="50"></td>
-                    <td>IDM</td>
+                    <td>
+                            {{ person.position }}
+                    </td>
                 </tr>
                 <tr>
                     <th>Global Employee Subgroup</th>
                     <td width="50"></td>
-                    <td>Special Employment</td>
+                    <td> TO DO</td>
                 </tr>
             </tbody>
         </table>
